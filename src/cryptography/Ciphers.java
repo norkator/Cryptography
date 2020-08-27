@@ -120,7 +120,8 @@ public class Ciphers {
 
 		// Anubis
 		final byte[] anubisKeyBytes = AnubisMethod.GetRandomKeyBytes();
-		final String anubiusEncrypted = AnubisMethod.Anubis("TESTING ANUBIS", anubisKeyBytes, Mode.ENCRYPT);
+		final String anubiusEncrypted = AnubisMethod
+				.Anubis("VERY LONG STRING FOR TESTING ANUBIS IMPLEMENTATION 1234567890", anubisKeyBytes, Mode.ENCRYPT);
 		System.out.println("Anubis key    : " + AnubisMethod.KeyBytesToBase64String(anubisKeyBytes));
 		System.out.println("Anubis encrypt: " + anubiusEncrypted);
 		System.out.println("Anubis decrypt: " + AnubisMethod.Anubis(anubiusEncrypted, anubisKeyBytes, Mode.DECRYPT));
